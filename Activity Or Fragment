@@ -1,0 +1,30 @@
+public class OfferWallFragment extends Fragment implements OfferWallDataAdapter.OnItemClick {
+
+
+  onCreate(){
+  
+  RecyclerView.Adapter adapter = new OfferWallDataAdapter(getActivity(), OfferWallFragment.this, OfferWallFragment.this, offerWallDataBeen);
+  card_recycler_category_list.setAdapter(adapter);
+  
+  }
+  
+  
+   @Override
+    public void onListClick(int pos, OfferWallDataBeen.Data offerdata) {
+        Log.d("tag","open offer Details");
+
+
+//        if(offerWallDataBeen.data.get(pos).offer_end_time.equals("00:00:00")){}
+
+        OfferDetailFragment offerDetailFragment = new OfferDetailFragment(offerdata);
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("pos", pos);
+
+        offerDetailFragment.setArguments(bundle);
+
+        ((BaseContainerFragment) getParentFragment()).addFragment(offerDetailFragment, true);
+        ((MainActivity) getActivity()).backFragment();
+
+    }
+  }
