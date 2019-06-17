@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    card_view:cardCornerRadius="@dimen/_5sdp">
+
+
+    <LinearLayout
+        android:id="@+id/lin_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_category"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/offer_wall" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_categoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="Offer Name"
+                    android:textColor="#000"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <TextView
+                    android:id="@+id/tv_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text="Action" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:elevation="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="@color/colorPrimary"
+                card_view:cardCornerRadius="@dimen/_10sdp"
+                card_view:cardElevation="@dimen/_5sdp"
+                card_view:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_offer_points"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="5000"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:text="Points"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+
+                android:id="@+id/lin_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Claim After Time Finish" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/_400sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/red_button"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_4sdp"
+                    android:paddingRight="@dimen/_4sdp">
+
+
+                    <utils.TimerTextView
+
+                        android:id="@+id/tv_offer_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.rey.material.widget.Button
+                android:id="@+id/tv_offer_completed"
+                android:layout_width="@dimen/_400sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/red_button"
+                android:gravity="center"
+                android:text="Claim Now"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
